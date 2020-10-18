@@ -10,18 +10,7 @@ public class PlayerController : MonoBehaviour
     private float horizontalInput;
     private float verticalInput;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
     void Update()
-    {
-
-    }
-
-    void FixedUpdate()
     {
         // Check for horizontal & vertical player movement boundary
         if (transform.position.x < -xRange)
@@ -40,8 +29,10 @@ public class PlayerController : MonoBehaviour
         {
             transform.position = new Vector3(transform.position.x, yRange, transform.position.z);
         }
+    }
 
-
+    void FixedUpdate()
+    {
         // Player input movement
         horizontalInput = Input.GetAxis("Horizontal");
         transform.Translate(Vector3.right * horizontalInput * Time.deltaTime * playerSpeed, Space.World);
