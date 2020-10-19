@@ -121,6 +121,87 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &166380313
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 166380316}
+  - component: {fileID: 166380315}
+  - component: {fileID: 166380314}
+  m_Layer: 0
+  m_Name: AsteroidSpawnManager_Left
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &166380314
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 166380313}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 250, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &166380315
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 166380313}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2038c39294118448a6d7ba2d640871a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnInterval: 4.5
+  startDelay: 3.75
+  enemyPrefabs:
+  - {fileID: 3397647336995439242, guid: f18df96dee3786d4c9f3fe9dc879e149, type: 3}
+  - {fileID: 2292334552758659989, guid: 2da91189a8b03a443ba81f975f908976, type: 3}
+  - {fileID: 9157739170537777179, guid: 325804980b9e86f4faf34176a769296e, type: 3}
+  - {fileID: 4529091914132849359, guid: 7e25024ea7c00824b984f2683534adb7, type: 3}
+  - {fileID: 6388540236409638658, guid: a4cdecbf42374d248a4ff36ccd125c48, type: 3}
+  - {fileID: 8880567654169969082, guid: 14c792ca5741abc45a9c758e004506b5, type: 3}
+  - {fileID: 457931840594763245, guid: d61e97acac53e184f830ade51002fe07, type: 3}
+  - {fileID: 8728673985921484837, guid: 541ee043ebcd2a949a27a061067b0a24, type: 3}
+  - {fileID: 248719914701165930, guid: 5ab55bed448a75945b9b45e242570df2, type: 3}
+  - {fileID: 3487170760115453669, guid: 954332ece2d55cd48848293b13b843e9, type: 3}
+  - {fileID: 8321997658444458637, guid: 1344210ff414cf142b8045b726476c88, type: 3}
+  - {fileID: 4280730863913653825, guid: 62df2e761f06caf479a92b8049c0dd09, type: 3}
+  - {fileID: 1535928800010508407, guid: c9b5629208e849d45b1f1a9a3692784c, type: 3}
+  - {fileID: 6905523186823517791, guid: 79ada86362987624a955284b82a87bd4, type: 3}
+  - {fileID: 5877510777500747463, guid: 0704f2dc609153545b42fd6762176649, type: 3}
+  - {fileID: 1320925358220865534, guid: 8d11a729b81106e4897d2bee6e887c05, type: 3}
+  - {fileID: 339293314181626749, guid: 176d750574c34b3418e8499c39eb5453, type: 3}
+  - {fileID: 7799484183673729231, guid: c8ccf9e9c1782c2459646c03f3adc608, type: 3}
+  - {fileID: 6873662956267010633, guid: b9a5a5a92ca8f6644a921424ad1b2d84, type: 3}
+  - {fileID: 8232017015049594235, guid: 15a6b739728a1ee4dbdca08b055dfdf5, type: 3}
+  - {fileID: 4213547578113161036, guid: 6285d505b6dbac34a8d0f6c33aad5dbe, type: 3}
+--- !u!4 &166380316
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 166380313}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -164.9, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &248352892
 GameObject:
   m_ObjectHideFlags: 0
@@ -412,6 +493,87 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &915792043
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 915792046}
+  - component: {fileID: 915792045}
+  - component: {fileID: 915792044}
+  m_Layer: 0
+  m_Name: AsteroidSpawnManager_Bottom
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &915792044
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 915792043}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37346a7a5184b1c47be67fda6cbcd0e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnInterval: 5.25
+  startDelay: 4
+  enemyPrefabs:
+  - {fileID: 3397647336995439242, guid: f18df96dee3786d4c9f3fe9dc879e149, type: 3}
+  - {fileID: 2292334552758659989, guid: 2da91189a8b03a443ba81f975f908976, type: 3}
+  - {fileID: 9157739170537777179, guid: 325804980b9e86f4faf34176a769296e, type: 3}
+  - {fileID: 4529091914132849359, guid: 7e25024ea7c00824b984f2683534adb7, type: 3}
+  - {fileID: 6388540236409638658, guid: a4cdecbf42374d248a4ff36ccd125c48, type: 3}
+  - {fileID: 8880567654169969082, guid: 14c792ca5741abc45a9c758e004506b5, type: 3}
+  - {fileID: 457931840594763245, guid: d61e97acac53e184f830ade51002fe07, type: 3}
+  - {fileID: 8728673985921484837, guid: 541ee043ebcd2a949a27a061067b0a24, type: 3}
+  - {fileID: 248719914701165930, guid: 5ab55bed448a75945b9b45e242570df2, type: 3}
+  - {fileID: 3487170760115453669, guid: 954332ece2d55cd48848293b13b843e9, type: 3}
+  - {fileID: 8321997658444458637, guid: 1344210ff414cf142b8045b726476c88, type: 3}
+  - {fileID: 4280730863913653825, guid: 62df2e761f06caf479a92b8049c0dd09, type: 3}
+  - {fileID: 1535928800010508407, guid: c9b5629208e849d45b1f1a9a3692784c, type: 3}
+  - {fileID: 6905523186823517791, guid: 79ada86362987624a955284b82a87bd4, type: 3}
+  - {fileID: 5877510777500747463, guid: 0704f2dc609153545b42fd6762176649, type: 3}
+  - {fileID: 1320925358220865534, guid: 8d11a729b81106e4897d2bee6e887c05, type: 3}
+  - {fileID: 339293314181626749, guid: 176d750574c34b3418e8499c39eb5453, type: 3}
+  - {fileID: 7799484183673729231, guid: c8ccf9e9c1782c2459646c03f3adc608, type: 3}
+  - {fileID: 6873662956267010633, guid: b9a5a5a92ca8f6644a921424ad1b2d84, type: 3}
+  - {fileID: 8232017015049594235, guid: 15a6b739728a1ee4dbdca08b055dfdf5, type: 3}
+  - {fileID: 4213547578113161036, guid: 6285d505b6dbac34a8d0f6c33aad5dbe, type: 3}
+--- !u!65 &915792045
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 915792043}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 250, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!4 &915792046
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 915792043}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 180, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &935730074
 PrefabInstance:
@@ -812,7 +974,7 @@ GameObject:
   - component: {fileID: 1246134446}
   - component: {fileID: 1246134447}
   m_Layer: 0
-  m_Name: AsteroidSpawnManager
+  m_Name: AsteroidSpawnManager_Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -844,7 +1006,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fd9c9bce5accd8478795041d3e870e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnInterval: 3.5
+  spawnInterval: 3.75
   startDelay: 2
   enemyPrefabs:
   - {fileID: 3397647336995439242, guid: f18df96dee3786d4c9f3fe9dc879e149, type: 3}
@@ -881,6 +1043,87 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 250, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &1807436913
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1807436916}
+  - component: {fileID: 1807436915}
+  - component: {fileID: 1807436914}
+  m_Layer: 0
+  m_Name: AsteroidSpawnManager_Top
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1807436914
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1807436913}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37346a7a5184b1c47be67fda6cbcd0e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnInterval: 5.25
+  startDelay: 4
+  enemyPrefabs:
+  - {fileID: 3397647336995439242, guid: f18df96dee3786d4c9f3fe9dc879e149, type: 3}
+  - {fileID: 2292334552758659989, guid: 2da91189a8b03a443ba81f975f908976, type: 3}
+  - {fileID: 9157739170537777179, guid: 325804980b9e86f4faf34176a769296e, type: 3}
+  - {fileID: 4529091914132849359, guid: 7e25024ea7c00824b984f2683534adb7, type: 3}
+  - {fileID: 6388540236409638658, guid: a4cdecbf42374d248a4ff36ccd125c48, type: 3}
+  - {fileID: 8880567654169969082, guid: 14c792ca5741abc45a9c758e004506b5, type: 3}
+  - {fileID: 457931840594763245, guid: d61e97acac53e184f830ade51002fe07, type: 3}
+  - {fileID: 8728673985921484837, guid: 541ee043ebcd2a949a27a061067b0a24, type: 3}
+  - {fileID: 248719914701165930, guid: 5ab55bed448a75945b9b45e242570df2, type: 3}
+  - {fileID: 3487170760115453669, guid: 954332ece2d55cd48848293b13b843e9, type: 3}
+  - {fileID: 8321997658444458637, guid: 1344210ff414cf142b8045b726476c88, type: 3}
+  - {fileID: 4280730863913653825, guid: 62df2e761f06caf479a92b8049c0dd09, type: 3}
+  - {fileID: 1535928800010508407, guid: c9b5629208e849d45b1f1a9a3692784c, type: 3}
+  - {fileID: 6905523186823517791, guid: 79ada86362987624a955284b82a87bd4, type: 3}
+  - {fileID: 5877510777500747463, guid: 0704f2dc609153545b42fd6762176649, type: 3}
+  - {fileID: 1320925358220865534, guid: 8d11a729b81106e4897d2bee6e887c05, type: 3}
+  - {fileID: 339293314181626749, guid: 176d750574c34b3418e8499c39eb5453, type: 3}
+  - {fileID: 7799484183673729231, guid: c8ccf9e9c1782c2459646c03f3adc608, type: 3}
+  - {fileID: 6873662956267010633, guid: b9a5a5a92ca8f6644a921424ad1b2d84, type: 3}
+  - {fileID: 8232017015049594235, guid: 15a6b739728a1ee4dbdca08b055dfdf5, type: 3}
+  - {fileID: 4213547578113161036, guid: 6285d505b6dbac34a8d0f6c33aad5dbe, type: 3}
+--- !u!65 &1807436915
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1807436913}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 250, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!4 &1807436916
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1807436913}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 180, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1914696469
 GameObject:
   m_ObjectHideFlags: 0

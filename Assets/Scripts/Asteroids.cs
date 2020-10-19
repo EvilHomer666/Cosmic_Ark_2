@@ -25,11 +25,6 @@ public class Asteroids : MonoBehaviour
             enemyProjectileRigidBody.velocity = new Vector3(playerLastPosition.x, playerLastPosition.y);
         }
     }
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
 
     private void OnTriggerEnter(Collider other)
     {

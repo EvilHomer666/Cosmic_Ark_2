@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AsteroidSpawnManager : MonoBehaviour
+public class AsteroidSpawnManager_L : MonoBehaviour
 {
     // Right side spawn location
     private float spawnPosX = 125f;
@@ -34,8 +34,7 @@ public class AsteroidSpawnManager : MonoBehaviour
     {
         // Randomly generate enemies per screen location
         int enemyIndex = Random.Range(0, enemyPrefabs.Length);
-        Vector3 spawnPos = new Vector3(spawnPosX, Random.Range(-spawnRangeY, spawnRangeY), spawnPosZ);
+        Vector3 spawnPos = new Vector3(-spawnPosX, Random.Range(-spawnRangeY, spawnRangeY), spawnPosZ);
         Instantiate(enemyPrefabs[enemyIndex], spawnPos, enemyPrefabs[enemyIndex].transform.rotation);
     }
 }
-
