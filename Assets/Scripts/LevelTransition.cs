@@ -8,7 +8,7 @@ public class LevelTransition : MonoBehaviour
     private int levelToLoad;
 
     // Methods to pass level index
-    public void LoadNextLevel(int levelIndex)
+    private void LoadNextLevel(int levelIndex)
     {
         levelToLoad = levelIndex;
     }
@@ -17,6 +17,6 @@ public class LevelTransition : MonoBehaviour
     public void MoveToNextLevel()
     {
         LoadNextLevel(SceneManager.GetActiveScene().buildIndex + 1);
-        SceneManager.LoadScene (levelToLoad);
+        SceneManager.LoadScene(levelToLoad);
     }
 }
