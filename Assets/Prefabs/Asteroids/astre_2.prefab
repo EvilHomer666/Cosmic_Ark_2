@@ -19,7 +19,7 @@ GameObject:
   - component: {fileID: -8331922751301771888}
   m_Layer: 0
   m_Name: astre_2
-  m_TagString: Asteroid
+  m_TagString: Hazard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
