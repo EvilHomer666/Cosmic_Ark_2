@@ -5,7 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - PlayerProjectile_Lv01
-  - Asteroid
+  - PlayerShield
+  - Hazard
   layers:
   - Default
   - TransparentFX
