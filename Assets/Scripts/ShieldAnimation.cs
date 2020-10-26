@@ -13,6 +13,7 @@ public class ShieldAnimation : MonoBehaviour
         // Reference the Animator
         shieldAnimation = GetComponent<Animator>();
         shieldHit = false;
+        // Dissable animator until first hit
         GetComponent<Animator>().enabled = false;
     }
 

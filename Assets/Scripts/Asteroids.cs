@@ -29,6 +29,8 @@ public class Asteroids : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        // TO DO add player destruction when shield reaches zero
+
         //if (other.gameObject.tag == "Player")
         //{
         //    Destroy(other.gameObject);
