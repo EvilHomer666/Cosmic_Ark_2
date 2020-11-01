@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: -6334082658939692131}
   - component: {fileID: 5699565993745980565}
   - component: {fileID: 2765291509778230110}
+  - component: {fileID: -4634472985882411111}
   m_Layer: 0
   m_Name: astre_12
   m_TagString: Asteroid
@@ -123,4 +124,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96b5afdfe04511944b29c7a674f5f0e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectileSpeed: 10
+  asteroidSpeed: 40
+--- !u!114 &-4634472985882411111
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 110516}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea51ba516276a844eafcdbe19f6ff660, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitPoints: 1
+  scoreValue: 250
+  scoreManager: {fileID: 0}

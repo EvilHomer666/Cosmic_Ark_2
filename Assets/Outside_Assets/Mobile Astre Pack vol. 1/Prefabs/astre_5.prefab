@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: -4081253183865643757}
   - component: {fileID: -6185833669122464547}
   - component: {fileID: 8547670490200400735}
+  - component: {fileID: -7491271497795657931}
   m_Layer: 0
   m_Name: astre_5
   m_TagString: Asteroid
@@ -124,7 +125,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96b5afdfe04511944b29c7a674f5f0e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectileSpeed: 10
+  asteroidSpeed: 40
 --- !u!136 &8547670490200400735
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -139,3 +140,18 @@ CapsuleCollider:
   m_Height: 3.1493773
   m_Direction: 1
   m_Center: {x: 0.3132143, y: 0.21501477, z: -0.255026}
+--- !u!114 &-7491271497795657931
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 112560}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea51ba516276a844eafcdbe19f6ff660, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitPoints: 1
+  scoreValue: 250
+  scoreManager: {fileID: 0}
