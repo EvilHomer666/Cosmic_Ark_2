@@ -16,6 +16,6 @@ public class PercentageCalc : MonoBehaviour
     // Display value as percetage
     public void textUpdate(float value)
     {
-        percentageText.text = $"Shields: {Mathf.RoundToInt(value * 10) + "%"}";
+        percentageText.text = $"SHIELDS: {Mathf.RoundToInt(value * 10) + "%"}";
     }
 }

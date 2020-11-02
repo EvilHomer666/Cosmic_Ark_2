@@ -22,6 +22,7 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
+        // Condition to continue
         if (gameOver == true)
         {
             if (Input.GetKeyDown(KeyCode.R))
@@ -33,7 +34,7 @@ public class GameManager : MonoBehaviour
             // Condition to quit game
             if (Input.GetKeyDown(KeyCode.Escape))
             {
-                SceneManager.LoadScene("MainMenu"); // << Loads main menu scene on ESC
+                SceneManager.LoadScene("MainMenu");
                 Time.timeScale = 1;
                 // SceneManager.LoadScene(SceneManager.GetSceneByName("HighScores")); TO DO << load scores screen after game over and quit
             }
@@ -44,29 +45,17 @@ public class GameManager : MonoBehaviour
     {
         // Game Over condition            
         gameOverText.text = "Game Over";
-        tryAgainText.text = "Press 'R' Key to Try Again or Esc to Quit";
+        tryAgainText.text = "PRESS R KEY TO TRY AGAIN     ESC TO QUIT";
         StartCoroutine(PauseTime());
     }
 
-    // Coroutine method to allow player SFX to finish before pausing for game over screen.
+    // Coroutine to pause on game over
     IEnumerator PauseTime()
     {
         yield return new WaitForSeconds(pauseDelay);
         gameOver = true;
-        Time.timeScale = 0; // << Pauses game on game over
+        Time.timeScale = 0;
     }
-
-
-    // Used to quit game before main menu was added <<< >>> NEEDS TO BE MOVED TO MAIN MENU option
-    //    public void QuitGame()
-    //    {
-    //#if UNITY_EDITOR
-    //        UnityEditor.EditorApplication.isPlaying = false;
-    //#else
-    //        Application.Quit();
-    //#endif
-    //    }
-
 }
 
 

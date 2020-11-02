@@ -10,11 +10,6 @@ public class MainMenu : MonoBehaviour
     [SerializeField] GameObject credits;
     [SerializeField] GameObject playerAvatar;
 
-    private void Start()
-    {
-        //playerAvatar = FindObjectOfType<GameObject>();
-    }
-
     // Custom methods to show credits, main menu, start & quit game
     public void ShowCredits()
     {
