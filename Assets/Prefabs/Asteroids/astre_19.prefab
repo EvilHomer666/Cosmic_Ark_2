@@ -140,7 +140,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96b5afdfe04511944b29c7a674f5f0e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  asteroidSpeed: 50
+  asteroidSpeed: 70
 --- !u!114 &5921547673248180032
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -166,5 +166,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea51ba516276a844eafcdbe19f6ff660, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitPoints: 1
   scoreValue: 250

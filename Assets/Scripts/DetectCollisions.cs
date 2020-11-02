@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DetectCollisions : MonoBehaviour
 {
-    [SerializeField] float hitPoints = 1;
+    //[SerializeField] float hitPoints = 1; // TO DO: Use this if making stronger hazards
     [SerializeField] int scoreValue = 250;
     private ScoreManager scoreManager;
 
