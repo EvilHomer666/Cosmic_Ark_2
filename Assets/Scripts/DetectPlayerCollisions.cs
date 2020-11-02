@@ -7,17 +7,27 @@ using UnityEngine.SceneManagement;
 public class DetectPlayerCollisions : MonoBehaviour
 {
     [SerializeField] Shields shields;
+    [SerializeField] GameManager gameManager;
     [SerializeField] int collisionDamage = 1;
     private ShieldAnimation shieldAnimation;    
     public int playerMaxHitPoints;
     public int playerCurentHitpoints;
 
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         shieldAnimation = FindObjectOfType<ShieldAnimation>();
         shields.SetMaxShield(playerCurentHitpoints);
         playerCurentHitpoints = playerMaxHitPoints;
+    }
+
+    private void Update()
+    {
+        // Player game over check
+        if (playerCurentHitpoints <= -1)
+        {
+            Destroy(gameObject);
+            gameManager.GameOver();
+        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -38,6 +48,12 @@ public class DetectPlayerCollisions : MonoBehaviour
             }
 
             Destroy(other.gameObject);
+        }
+
+        // Player hit points limit reset
+        if (playerCurentHitpoints > playerMaxHitPoints)
+        {
+            playerCurentHitpoints = playerMaxHitPoints;
         }
     }
 }

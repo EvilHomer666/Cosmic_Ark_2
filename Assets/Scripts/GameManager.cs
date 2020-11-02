@@ -33,7 +33,7 @@ public class GameManager : MonoBehaviour
             // Condition to quit game
             if (Input.GetKeyDown(KeyCode.Escape))
             {
-                SceneManager.LoadScene("MainMenu");
+                SceneManager.LoadScene("MainMenu"); // << Loads main menu scene on ESC
                 Time.timeScale = 1;
                 // SceneManager.LoadScene(SceneManager.GetSceneByName("HighScores")); TO DO << load scores screen after game over and quit
             }
@@ -53,8 +53,7 @@ public class GameManager : MonoBehaviour
     {
         yield return new WaitForSeconds(pauseDelay);
         gameOver = true;
-        Debug.Log("Game Over!");
-        Time.timeScale = 0; // << Pauses game
+        Time.timeScale = 0; // << Pauses game on game over
     }
 
 
