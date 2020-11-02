@@ -5,17 +5,17 @@ using UnityEngine.UI;
 
 public class PercentageCalc : MonoBehaviour
 {
-    private Text percetageText;
+    private Text percentageText;
 
     // Awake is called before Update and the first frame update
     void Awake()
     {
-        percetageText = GetComponent<Text>();
+        percentageText = GetComponent<Text>();
     }
 
     // Display value as percetage
     public void textUpdate(float value)
     {
-        percetageText.text = $"Shields: {Mathf.RoundToInt(value * 10) + "%"}";
+        percentageText.text = $"Shields: {Mathf.RoundToInt(value * 10) + "%"}";
     }
 }
