@@ -2160,10 +2160,6 @@ PrefabInstance:
       propertyPath: gameManager
       value: 
       objectReference: {fileID: 223974228}
-    - target: {fileID: 675058183, guid: e8908cecf4d17244f80042f528f58385, type: 3}
-      propertyPath: playerMaxHitPoints
-      value: 10
-      objectReference: {fileID: 0}
     - target: {fileID: 2489224776426820798, guid: e8908cecf4d17244f80042f528f58385,
         type: 3}
       propertyPath: m_LocalPosition.x

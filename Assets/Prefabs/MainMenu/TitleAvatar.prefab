@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 496210350943433587}
   - component: {fileID: 8255945455042707315}
   - component: {fileID: 8255945455042707314}
-  - component: {fileID: 8255945455042707312}
   m_Layer: 0
   m_Name: TitleAvatar
   m_TagString: Player
@@ -65,19 +64,6 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -5876033929860254931, guid: e90f882f508cab546b9f29aa05386514, type: 3}
---- !u!114 &8255945455042707312
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 984375185331890633}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec54a616c7b04014d972328d347eafa8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerSpeed: 30
 --- !u!1 &1550635978042478104
 GameObject:
   m_ObjectHideFlags: 0
@@ -250,6 +236,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6999429efe215a24bbf8d5b60b8f06e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rotationSpeed: 2
 --- !u!54 &1161153011813641620
 Rigidbody:
   m_ObjectHideFlags: 0

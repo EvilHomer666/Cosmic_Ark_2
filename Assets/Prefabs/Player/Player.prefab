@@ -237,6 +237,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6999429efe215a24bbf8d5b60b8f06e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rotationSpeed: 1
 --- !u!54 &3779745573064247897
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -265,6 +266,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6999429efe215a24bbf8d5b60b8f06e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rotationSpeed: 1
 --- !u!1 &3008492591465745924
 GameObject:
   m_ObjectHideFlags: 0
@@ -361,7 +363,7 @@ MonoBehaviour:
   shields: {fileID: 0}
   gameManager: {fileID: 0}
   collisionDamage: 1
-  playerMaxHitPoints: 4
+  playerMaxHitPoints: 10
   playerCurentHitpoints: 0
 --- !u!1 &3597693465937766869
 GameObject:
