@@ -95,7 +95,7 @@ MeshCollider:
   serializedVersion: 4
   m_Convex: 1
   m_CookingOptions: 30
-  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 2540817853737639666, guid: eca34e5b74d1543479f86f8001c36758, type: 3}
 --- !u!95 &1640838191
 Animator:
   serializedVersion: 3
@@ -358,6 +358,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17a34fc074e5fdc4fadcd614398f632e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shields: {fileID: 0}
+  collisionDamage: 1
+  playerMaxHitPoints: 4
+  playerCurentHitpoints: 0
 --- !u!1 &3597693465937766869
 GameObject:
   m_ObjectHideFlags: 0

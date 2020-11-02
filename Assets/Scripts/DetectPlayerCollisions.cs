@@ -1,28 +1,36 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class DetectPlayerCollisions : MonoBehaviour
 {
-    private ShieldAnimation shieldAnimation;
-    private int playershield = 3;
+    [SerializeField] Shields shields;
+    [SerializeField] int collisionDamage = 1;
+    private ShieldAnimation shieldAnimation;    
+    public int playerMaxHitPoints;
+    public int playerCurentHitpoints;
 
     // Start is called before the first frame update
     void Start()
     {
         shieldAnimation = FindObjectOfType<ShieldAnimation>();
+        shields.SetMaxShield(playerCurentHitpoints);
+        playerCurentHitpoints = playerMaxHitPoints;
     }
 
     private void OnTriggerEnter(Collider other)
     {
         // Detect collisions on shields and flash shield
-        if (other.gameObject.tag == "Enemy" || other.gameObject.tag == "Hazard")
+        if (other.gameObject.tag == "Hazard")
         {
             Debug.Log("Collision!");
-            playershield -= 1;
-            Debug.Log("Shield:"+ playershield);
+            Debug.Log("Shield:" + playerCurentHitpoints);
 
             shieldAnimation.shieldHit = true;
+            playerCurentHitpoints -= collisionDamage;
+            shields.SetShield(playerCurentHitpoints);
 
             if (shieldAnimation.shieldHit == true)
             {
