@@ -1,31 +1,63 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    [SerializeField] Text gameOverText;
+    [SerializeField] Text tryAgainText;
+    private float pauseDelay = 1;
+    public bool gameOver;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        // Set UI defaults
+        gameOver = false;
+        gameOverText.text = "";
+        tryAgainText.text = "";
     }
 
-    // Update is called once per frame
     void Update()
     {
-        // Condition to quit game
-        if (Input.GetKeyDown(KeyCode.Escape))
+        // Condition to continue
+        if (gameOver == true)
         {
-            QuitGame();
+            if (Input.GetKeyDown(KeyCode.R))
+            {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+                Time.timeScale = 1;
+            }
+
+            // Condition to quit game
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                SceneManager.LoadScene("MainMenu");
+                Time.timeScale = 1;
+                // SceneManager.LoadScene(SceneManager.GetSceneByName("HighScores")); TO DO << load scores screen after game over and quit
+            }
         }
     }
 
-    public void QuitGame()
+    public void GameOver()
     {
-#if UNITY_EDITOR
-        UnityEditor.EditorApplication.isPlaying = false;
-#else
-        Application.Quit();
-#endif
+        // Game Over condition            
+        gameOverText.text = "Game Over";
+        tryAgainText.text = "PRESS R KEY TO TRY AGAIN     ESC TO QUIT";
+        StartCoroutine(PauseTime());
+    }
+
+    // Coroutine to pause on game over
+    IEnumerator PauseTime()
+    {
+        yield return new WaitForSeconds(pauseDelay);
+        gameOver = true;
+        Time.timeScale = 0;
     }
 }
+
+
+
+

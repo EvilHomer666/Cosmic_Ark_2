@@ -32,7 +32,7 @@ public class Timers : MonoBehaviour
     {
         // Level Timer.
         roundTime -= Time.deltaTime;
-        timerText.text = $"Time: {roundTime.ToString("n2")}";
+        timerText.text = $"TIME: {roundTime.ToString("n2")}";
 
         if (roundTime < timerLimit)
         {

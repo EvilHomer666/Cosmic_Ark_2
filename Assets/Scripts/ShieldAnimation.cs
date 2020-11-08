@@ -19,6 +19,7 @@ public class ShieldAnimation : MonoBehaviour
 
     public void PlayShieldAnimation()
     {
+        // Activate shield VFX
         if(shieldHit == true)
         {
             GetComponent<Animator>().enabled = true;
