@@ -294,6 +294,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 188354865}
   m_CullTransparentMesh: 0
+--- !u!1 &310588179 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5692728753847505147, guid: 497689b23d98d2a4c9880ab56cc4753c,
+    type: 3}
+  m_PrefabInstance: {fileID: 2623738286066066110}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &310588183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 310588179}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6999429efe215a24bbf8d5b60b8f06e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeed: -0.0025
 --- !u!1 &420698823
 GameObject:
   m_ObjectHideFlags: 0
@@ -526,7 +545,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -205}
+  m_AnchoredPosition: {x: 0, y: -290.5}
   m_SizeDelta: {x: 200, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &628877434
@@ -986,7 +1005,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -273.5}
+  m_AnchoredPosition: {x: 0, y: -340}
   m_SizeDelta: {x: 240, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &813606691
@@ -1221,7 +1240,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -472}
+  m_AnchoredPosition: {x: 0, y: -492}
   m_SizeDelta: {x: 1600, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1065096111
@@ -1619,7 +1638,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -343.7}
+  m_AnchoredPosition: {x: 0, y: -410.2}
   m_SizeDelta: {x: 150, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1200903500
@@ -2973,7 +2992,7 @@ PrefabInstance:
     - target: {fileID: 496210350943433587, guid: 497689b23d98d2a4c9880ab56cc4753c,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 496210350943433587, guid: 497689b23d98d2a4c9880ab56cc4753c,
         type: 3}
@@ -3024,41 +3043,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: TitleAvatar
-      objectReference: {fileID: 0}
-    - target: {fileID: 3368805611449057197, guid: 497689b23d98d2a4c9880ab56cc4753c,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: f911894201d8b894bba4ed562d39b5f1, type: 2}
-    - target: {fileID: 4921152428680399425, guid: 497689b23d98d2a4c9880ab56cc4753c,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.11545
-      objectReference: {fileID: 0}
-    - target: {fileID: 4921152428680399425, guid: 497689b23d98d2a4c9880ab56cc4753c,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.057669
-      objectReference: {fileID: 0}
-    - target: {fileID: 4921152428680399425, guid: 497689b23d98d2a4c9880ab56cc4753c,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 27.590614
-      objectReference: {fileID: 0}
-    - target: {fileID: 4921152428680399425, guid: 497689b23d98d2a4c9880ab56cc4753c,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 27.590614
-      objectReference: {fileID: 0}
-    - target: {fileID: 4921152428680399425, guid: 497689b23d98d2a4c9880ab56cc4753c,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 27.590614
-      objectReference: {fileID: 0}
-    - target: {fileID: 4921152428680399425, guid: 497689b23d98d2a4c9880ab56cc4753c,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -26.04
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 497689b23d98d2a4c9880ab56cc4753c, type: 3}
