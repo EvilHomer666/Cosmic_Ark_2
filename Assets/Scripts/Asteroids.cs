@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Asteroids : MonoBehaviour
 {
-    [SerializeField] float asteroidSpeed = 40;
-
+    [SerializeField] float slowAsteroidSpeed;
+    [SerializeField] float fastAsteroidSpeed;
     private Vector3 playerLastPosition;
     private Rigidbody enemyProjectileRigidBody;
     private GameObject player;
@@ -22,7 +22,7 @@ public class Asteroids : MonoBehaviour
         if (player != null)
         {
             // Regular move behavior.
-            playerLastPosition = (player.transform.position - transform.position).normalized * asteroidSpeed;
+            playerLastPosition = (player.transform.position - transform.position).normalized * Random.Range(slowAsteroidSpeed, fastAsteroidSpeed); ;
             enemyProjectileRigidBody.velocity = new Vector3(playerLastPosition.x, playerLastPosition.y);
         }
     }
