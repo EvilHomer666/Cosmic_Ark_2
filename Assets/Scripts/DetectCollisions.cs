@@ -7,17 +7,13 @@ public class DetectCollisions : MonoBehaviour
     //[SerializeField] float hitPoints = 1; // TO DO: Use this if making stronger hazards
     [SerializeField] int scoreValue = 250;
     private ScoreManager scoreManager;
+    private DetectPlayerCollisions restoreShield;
 
     // Start is called before the first frame update
     void Start()
     {
         scoreManager = FindObjectOfType<ScoreManager>();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        restoreShield = FindObjectOfType<DetectPlayerCollisions>();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -27,6 +23,10 @@ public class DetectCollisions : MonoBehaviour
             Destroy(gameObject);
             Destroy(other.gameObject);
             scoreManager.IncrementScore(scoreValue); // Add score
+
+            // Add shield restore points and update UI
+            restoreShield.playerCurentHitpoints += restoreShield.shieldRestoreValue;
+            restoreShield.shields.SetShield(restoreShield.playerCurentHitpoints);
         }
     }
 }

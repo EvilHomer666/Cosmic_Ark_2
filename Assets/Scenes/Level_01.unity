@@ -1365,7 +1365,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 51d313ad9f932e24f8bf88661fc08daa, type: 3}
+    m_Font: {fileID: 12800000, guid: 31671d5e8a439fe428c0cad942066d99, type: 3}
     m_FontSize: 36
     m_FontStyle: 0
     m_BestFit: 0
@@ -1929,7 +1929,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 51d313ad9f932e24f8bf88661fc08daa, type: 3}
+    m_Font: {fileID: 12800000, guid: 31671d5e8a439fe428c0cad942066d99, type: 3}
     m_FontSize: 36
     m_FontStyle: 0
     m_BestFit: 0
@@ -2133,7 +2133,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 51d313ad9f932e24f8bf88661fc08daa, type: 3}
+    m_Font: {fileID: 12800000, guid: 31671d5e8a439fe428c0cad942066d99, type: 3}
     m_FontSize: 36
     m_FontStyle: 0
     m_BestFit: 0
@@ -2257,6 +2257,10 @@ PrefabInstance:
       propertyPath: gameManager
       value: 
       objectReference: {fileID: 223974228}
+    - target: {fileID: 675058183, guid: e8908cecf4d17244f80042f528f58385, type: 3}
+      propertyPath: shieldRestoreValue
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 2489224776426820798, guid: e8908cecf4d17244f80042f528f58385,
         type: 3}
       propertyPath: m_LocalPosition.x

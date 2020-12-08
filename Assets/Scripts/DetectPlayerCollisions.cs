@@ -6,12 +6,14 @@ using UnityEngine.SceneManagement;
 
 public class DetectPlayerCollisions : MonoBehaviour
 {
-    public Shields shields;
     [SerializeField] GameManager gameManager;
     [SerializeField] int collisionDamage = 1;
-    private ShieldAnimation shieldAnimation;    
+    private ShieldAnimation shieldAnimation;
+    public Shields shields;
     public int playerMaxHitPoints;
     public float playerCurentHitpoints;
+    public float shieldRestoreValue = 0.010f;
+
 
     private void Start()
     {

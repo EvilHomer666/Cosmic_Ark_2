@@ -26,15 +26,5 @@ public class Asteroids : MonoBehaviour
             enemyProjectileRigidBody.velocity = new Vector3(playerLastPosition.x, playerLastPosition.y);
         }
     }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        // TO DO add player destruction when shield reaches zero
-
-        //if (other.gameObject.tag == "Player")
-        //{
-        //    Destroy(other.gameObject);
-        //}
-    }
 }
 
