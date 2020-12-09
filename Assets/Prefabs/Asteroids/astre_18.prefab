@@ -141,7 +141,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slowAsteroidSpeed: 45
-  fastAsteroidSpeed: 110
+  fastAsteroidSpeed: 125
 --- !u!114 &3938662740470600437
 MonoBehaviour:
   m_ObjectHideFlags: 0
