@@ -6,6 +6,8 @@ using UnityEngine.UI;
 public class ScoreManager : MonoBehaviour
 {
     [SerializeField] Text scoreText;
+    
+    // Singleton used to carry score across scenes
     public static ScoreManager Instance { get; private set; }
     public int score;
 
