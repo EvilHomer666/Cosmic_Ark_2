@@ -1039,8 +1039,100 @@ PrefabInstance:
     - target: {fileID: 9116978842335414581, guid: 4cbe1b41abed6ab4a92239b9b339f637,
         type: 3}
       propertyPath: roundTime
-      value: 10
+      value: 60
       objectReference: {fileID: 0}
+    - target: {fileID: 9116978842595051940, guid: 4cbe1b41abed6ab4a92239b9b339f637,
+        type: 3}
+      propertyPath: enemyPrefabs.Array.size
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 9116978842595051940, guid: 4cbe1b41abed6ab4a92239b9b339f637,
+        type: 3}
+      propertyPath: enemyPrefabs.Array.data[15]
+      value: 
+      objectReference: {fileID: 339293314181626749, guid: 176d750574c34b3418e8499c39eb5453,
+        type: 3}
+    - target: {fileID: 9116978842595051940, guid: 4cbe1b41abed6ab4a92239b9b339f637,
+        type: 3}
+      propertyPath: enemyPrefabs.Array.data[16]
+      value: 
+      objectReference: {fileID: 6873662956267010633, guid: b9a5a5a92ca8f6644a921424ad1b2d84,
+        type: 3}
+    - target: {fileID: 9116978842595051940, guid: 4cbe1b41abed6ab4a92239b9b339f637,
+        type: 3}
+      propertyPath: enemyPrefabs.Array.data[17]
+      value: 
+      objectReference: {fileID: 4213547578113161036, guid: 6285d505b6dbac34a8d0f6c33aad5dbe,
+        type: 3}
+    - target: {fileID: 9116978843110638968, guid: 4cbe1b41abed6ab4a92239b9b339f637,
+        type: 3}
+      propertyPath: enemyPrefabs.Array.size
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 9116978843110638968, guid: 4cbe1b41abed6ab4a92239b9b339f637,
+        type: 3}
+      propertyPath: enemyPrefabs.Array.data[15]
+      value: 
+      objectReference: {fileID: 339293314181626749, guid: 176d750574c34b3418e8499c39eb5453,
+        type: 3}
+    - target: {fileID: 9116978843110638968, guid: 4cbe1b41abed6ab4a92239b9b339f637,
+        type: 3}
+      propertyPath: enemyPrefabs.Array.data[16]
+      value: 
+      objectReference: {fileID: 6873662956267010633, guid: b9a5a5a92ca8f6644a921424ad1b2d84,
+        type: 3}
+    - target: {fileID: 9116978843110638968, guid: 4cbe1b41abed6ab4a92239b9b339f637,
+        type: 3}
+      propertyPath: enemyPrefabs.Array.data[17]
+      value: 
+      objectReference: {fileID: 4213547578113161036, guid: 6285d505b6dbac34a8d0f6c33aad5dbe,
+        type: 3}
+    - target: {fileID: 9116978843315332474, guid: 4cbe1b41abed6ab4a92239b9b339f637,
+        type: 3}
+      propertyPath: enemyPrefabs.Array.size
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 9116978843315332474, guid: 4cbe1b41abed6ab4a92239b9b339f637,
+        type: 3}
+      propertyPath: enemyPrefabs.Array.data[15]
+      value: 
+      objectReference: {fileID: 339293314181626749, guid: 176d750574c34b3418e8499c39eb5453,
+        type: 3}
+    - target: {fileID: 9116978843315332474, guid: 4cbe1b41abed6ab4a92239b9b339f637,
+        type: 3}
+      propertyPath: enemyPrefabs.Array.data[16]
+      value: 
+      objectReference: {fileID: 6873662956267010633, guid: b9a5a5a92ca8f6644a921424ad1b2d84,
+        type: 3}
+    - target: {fileID: 9116978843315332474, guid: 4cbe1b41abed6ab4a92239b9b339f637,
+        type: 3}
+      propertyPath: enemyPrefabs.Array.data[17]
+      value: 
+      objectReference: {fileID: 4213547578113161036, guid: 6285d505b6dbac34a8d0f6c33aad5dbe,
+        type: 3}
+    - target: {fileID: 9116978844244428493, guid: 4cbe1b41abed6ab4a92239b9b339f637,
+        type: 3}
+      propertyPath: enemyPrefabs.Array.size
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 9116978844244428493, guid: 4cbe1b41abed6ab4a92239b9b339f637,
+        type: 3}
+      propertyPath: enemyPrefabs.Array.data[15]
+      value: 
+      objectReference: {fileID: 339293314181626749, guid: 176d750574c34b3418e8499c39eb5453,
+        type: 3}
+    - target: {fileID: 9116978844244428493, guid: 4cbe1b41abed6ab4a92239b9b339f637,
+        type: 3}
+      propertyPath: enemyPrefabs.Array.data[16]
+      value: 
+      objectReference: {fileID: 6873662956267010633, guid: b9a5a5a92ca8f6644a921424ad1b2d84,
+        type: 3}
+    - target: {fileID: 9116978844244428493, guid: 4cbe1b41abed6ab4a92239b9b339f637,
+        type: 3}
+      propertyPath: enemyPrefabs.Array.data[17]
+      value: 
+      objectReference: {fileID: 4213547578113161036, guid: 6285d505b6dbac34a8d0f6c33aad5dbe,
+        type: 3}
     - target: {fileID: 9116978844300187266, guid: 4cbe1b41abed6ab4a92239b9b339f637,
         type: 3}
       propertyPath: gameOverText

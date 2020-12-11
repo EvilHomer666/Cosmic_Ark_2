@@ -4,15 +4,10 @@ using UnityEngine;
 
 public class TracktorBeam : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    // Applies an upwards force to all rigidbodies that enter the trigger.
+    void OnTriggerStay(Collider other)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        if (other.attachedRigidbody)
+            other.attachedRigidbody.AddForce(Vector3.up * 10);
     }
 }

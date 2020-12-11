@@ -7,7 +7,7 @@ public class UFOController : MonoBehaviour
     [SerializeField] float playerSpeed;
     private float xRange = 85f;
     private float yRangeUp = 5f;
-    private float yRangeDown = 60f;
+    private float yRangeDown = 50f;
     private float horizontalInput;
     private float verticalInput;
 
