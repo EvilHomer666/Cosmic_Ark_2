@@ -12,7 +12,8 @@ public class SoundManager : MonoBehaviour
     [SerializeField] AudioClip UFO_Scaning;
     [SerializeField] AudioClip UFO_Rescuing;
     [SerializeField] AudioClip MeteorDestroyed;
-    [SerializeField] AudioClip ShipDestroyed;
+    [SerializeField] AudioClip MothershipDestroyed;
+
 
     private AudioSource audioSource;
 
@@ -31,7 +32,7 @@ public class SoundManager : MonoBehaviour
     }
     public void Fire()
     {
-        audioSource.PlayOneShot(FireProjectile, 1.0f);
+        audioSource.PlayOneShot(FireProjectile, 0.5f);
         return;
     }
     public void UFO_Scan()
@@ -46,12 +47,12 @@ public class SoundManager : MonoBehaviour
     }
     public void MeteorDestroy()
     {
-        audioSource.PlayOneShot(MeteorDestroyed, 1.0f);
+        audioSource.PlayOneShot(MeteorDestroyed, 1.5f);
         return;
     }
-    public void ShipDestroy()
+    public void MothershipDestroy()
     {
-        audioSource.PlayOneShot(ShipDestroyed, 1.0f);
+        audioSource.PlayOneShot(MothershipDestroyed, 1.0f);
         return;
     }
 }

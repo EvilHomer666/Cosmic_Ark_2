@@ -8,6 +8,7 @@ public class DetectPlayerCollisions : MonoBehaviour
 {
     [SerializeField] GameManager gameManager;
     [SerializeField] int collisionDamage = 1;
+    private SoundManager soundManager;
     private ShieldAnimation shieldAnimation;
     public Shields shields;
     public int playerMaxHitPoints;
@@ -18,6 +19,8 @@ public class DetectPlayerCollisions : MonoBehaviour
     private void Start()
     {
         shieldAnimation = FindObjectOfType<ShieldAnimation>();
+        GameObject soundManagerObject = GameObject.FindWithTag("SoundManager");
+        soundManager = soundManagerObject.GetComponent<SoundManager>();
         shields = FindObjectOfType<Shields>();
         playerCurentHitpoints = playerMaxHitPoints;
         shields.SetMaxShield(playerCurentHitpoints);
@@ -28,6 +31,7 @@ public class DetectPlayerCollisions : MonoBehaviour
         // Game over check
         if (playerCurentHitpoints <= -1)
         {
+            soundManager.MothershipDestroy();
             Destroy(gameObject);
             gameManager.GameOver();
         }
@@ -40,6 +44,7 @@ public class DetectPlayerCollisions : MonoBehaviour
         {
             shieldAnimation.shieldHit = true;
             playerCurentHitpoints -= collisionDamage;
+            soundManager.MeteorDestroy();
             shields.SetShield(playerCurentHitpoints);
 
             if (shieldAnimation.shieldHit == true)

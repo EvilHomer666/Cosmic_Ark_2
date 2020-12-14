@@ -7,11 +7,19 @@ public class PlayerProjectiles : MonoBehaviour
     [SerializeField] Transform aimCannon;
     [SerializeField] GameObject playerProjectileLv_01;
     [SerializeField] float speedForce = 20f;
+    private SoundManager soundManager;
+
+    private void Start()
+    {
+        GameObject soundManagerObject = GameObject.FindWithTag("SoundManager");
+        soundManager = soundManagerObject.GetComponent<SoundManager>();
+    }
 
     private void Update()
     {
         if (Input.GetButtonDown("Fire1"))
         {
+            soundManager.Fire();
             FireProjectile();
         }
     }
