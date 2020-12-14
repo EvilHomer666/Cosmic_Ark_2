@@ -5,6 +5,8 @@ using UnityEngine;
 public class UFOController : MonoBehaviour
 {
     [SerializeField] float playerSpeed;
+    [SerializeField] AudioClip ufoMovement;
+    private AudioSource audioSource;
     private float xRange = 85f;
     private float yRangeUp = 5f;
     private float yRangeDown = 50f;
@@ -12,8 +14,10 @@ public class UFOController : MonoBehaviour
     private float verticalInput;
     public bool isEnabled;
 
+
     private void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         isEnabled = true;
     }
 
@@ -36,7 +40,7 @@ public class UFOController : MonoBehaviour
         if (transform.position.y > yRangeUp)
         {
             transform.position = new Vector3(transform.position.x, yRangeUp, transform.position.z);
-        }
+        }           
     }
 
     void FixedUpdate()
@@ -49,6 +53,25 @@ public class UFOController : MonoBehaviour
 
             verticalInput = Input.GetAxis("Vertical");
             transform.Translate(Vector3.up * verticalInput * Time.deltaTime * playerSpeed, Space.World);
+
+        }
+
+        // UFO movement SFX condition
+        if (Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0)
+        {
+            if(!audioSource.isPlaying)
+            {
+                audioSource.clip = ufoMovement;
+                audioSource.Play();
+            }
+        }
+        else if (Input.GetAxis("Horizontal") == 0 || Input.GetAxis("Vertical") == 0)
+        {
+            if (audioSource.isPlaying)
+            {
+                audioSource.clip = ufoMovement;
+                audioSource.Stop();
+            }
         }
     }
 }

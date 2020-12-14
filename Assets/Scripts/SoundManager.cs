@@ -7,14 +7,11 @@ public class SoundManager : MonoBehaviour
     // TO DO: Refactor this entire script for better performance
 
     // SFX clips
-    [SerializeField] AudioClip UFO_Movement;
     [SerializeField] AudioClip FireProjectile;
     [SerializeField] AudioClip UFO_Scaning;
     [SerializeField] AudioClip UFO_Rescuing;
     [SerializeField] AudioClip MeteorDestroyed;
     [SerializeField] AudioClip MothershipDestroyed;
-
-
     private AudioSource audioSource;
 
     // Start is called before the first frame update
@@ -24,12 +21,7 @@ public class SoundManager : MonoBehaviour
     }
 
 
-    // Player SFX
-    public void UFO_Move()
-    {
-        audioSource.PlayOneShot(UFO_Movement, 1.0f);
-        return;
-    }
+    // SFX methods
     public void Fire()
     {
         audioSource.PlayOneShot(FireProjectile, 0.5f);

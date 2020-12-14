@@ -12,6 +12,7 @@ TagManager:
   - TracktorBeam
   - ShieldSlider
   - Creature
+  - SoundManager
   layers:
   - Default
   - TransparentFX
