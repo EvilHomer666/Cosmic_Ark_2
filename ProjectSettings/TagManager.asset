@@ -10,6 +10,8 @@ TagManager:
   - Asteroid
   - CarryOver
   - TracktorBeam
+  - ShieldSlider
+  - Creature
   layers:
   - Default
   - TransparentFX
