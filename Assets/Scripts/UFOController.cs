@@ -10,6 +10,12 @@ public class UFOController : MonoBehaviour
     private float yRangeDown = 50f;
     private float horizontalInput;
     private float verticalInput;
+    public bool isEnabled;
+
+    private void Start()
+    {
+        isEnabled = true;
+    }
 
     void Update()
     {
@@ -35,11 +41,14 @@ public class UFOController : MonoBehaviour
 
     void FixedUpdate()
     {
-        // Player input movement
-        horizontalInput = Input.GetAxis("Horizontal");
-        transform.Translate(Vector3.right * horizontalInput * Time.deltaTime * playerSpeed, Space.World);
+        if (isEnabled == true)
+        {
+            // Player input movement
+            horizontalInput = Input.GetAxis("Horizontal");
+            transform.Translate(Vector3.right * horizontalInput * Time.deltaTime * playerSpeed, Space.World);
 
-        verticalInput = Input.GetAxis("Vertical");
-        transform.Translate(Vector3.up * verticalInput * Time.deltaTime * playerSpeed, Space.World);
+            verticalInput = Input.GetAxis("Vertical");
+            transform.Translate(Vector3.up * verticalInput * Time.deltaTime * playerSpeed, Space.World);
+        }
     }
 }

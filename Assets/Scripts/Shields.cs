@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Shields : MonoBehaviour
 {
-    public Slider slider;
+    [SerializeField] Slider slider;
 
     // Singleton used to carry score across scenes
     public static Shields Instance { get; private set; }
@@ -20,7 +20,6 @@ public class Shields : MonoBehaviour
         else
             Destroy(gameObject);
     }
-
 
     // Methods to show shield power through the slider component
     public void SetMaxShield(float shield)

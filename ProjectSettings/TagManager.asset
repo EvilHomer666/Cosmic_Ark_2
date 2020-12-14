@@ -9,6 +9,7 @@ TagManager:
   - Hazard
   - Asteroid
   - CarryOver
+  - TracktorBeam
   layers:
   - Default
   - TransparentFX
