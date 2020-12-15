@@ -14,6 +14,7 @@ public class DetectPlayerCollisions : MonoBehaviour
     public int playerMaxHitPoints;
     public float playerCurentHitpoints;
     public float shieldRestoreValue = 0.010f;
+    public int rescuePoint = 2;
 
 
     private void Start()

@@ -9,6 +9,7 @@ public class ScoreManager : MonoBehaviour
 
     // Singleton used to carry score across scenes
     public static ScoreManager Instance { get; private set; }
+    public int rescueBonus = 400;
     public int score;
 
     private void Awake()
@@ -18,8 +19,8 @@ public class ScoreManager : MonoBehaviour
             Instance = this;
             DontDestroyOnLoad(gameObject);
         }
-        else
-            Destroy(gameObject);
+        //else
+        //    Destroy(gameObject);
     }
 
     // Start is called before the first frame update
