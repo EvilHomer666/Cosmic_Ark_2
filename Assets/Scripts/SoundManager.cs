@@ -8,7 +8,6 @@ public class SoundManager : MonoBehaviour
 
     // SFX clips
     [SerializeField] AudioClip FireProjectile;
-    [SerializeField] AudioClip UFO_Scaning;
     [SerializeField] AudioClip UFO_Rescuing;
     [SerializeField] AudioClip MeteorDestroyed;
     [SerializeField] AudioClip MothershipDestroyed;
@@ -25,11 +24,6 @@ public class SoundManager : MonoBehaviour
     public void Fire()
     {
         audioSource.PlayOneShot(FireProjectile, 0.5f);
-        return;
-    }
-    public void UFO_Scan()
-    {
-        audioSource.PlayOneShot(UFO_Scaning, 1.0f);
         return;
     }
     public void UFO_Rescue()

@@ -488,7 +488,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 675058183, guid: e8908cecf4d17244f80042f528f58385, type: 3}
       propertyPath: collisionDamage
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2489224776426820798, guid: e8908cecf4d17244f80042f528f58385,
         type: 3}

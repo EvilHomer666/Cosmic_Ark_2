@@ -4,19 +4,21 @@ using UnityEngine;
 
 public class UFOController : MonoBehaviour
 {
-    [SerializeField] float playerSpeed;
     [SerializeField] AudioClip ufoMovement;
+    [SerializeField] float playerSpeed;
+    private TracktorBeamActivation tracktorBeam;
     private AudioSource audioSource;
     private float xRange = 85f;
     private float yRangeUp = 5f;
     private float yRangeDown = 50f;
     private float horizontalInput;
     private float verticalInput;
-    public bool isEnabled;
+    public bool isEnabled; // Variable to check for UFO movement condition
 
 
     private void Start()
     {
+        tracktorBeam = FindObjectOfType<TracktorBeamActivation>();
         audioSource = GetComponent<AudioSource>();
         isEnabled = true;
     }
@@ -59,13 +61,21 @@ public class UFOController : MonoBehaviour
         // UFO movement SFX condition
         if (Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0)
         {
-            if(!audioSource.isPlaying)
+                if (!audioSource.isPlaying)
             {
                 audioSource.clip = ufoMovement;
                 audioSource.Play();
             }
         }
         else if (Input.GetAxis("Horizontal") == 0 || Input.GetAxis("Vertical") == 0)
+        {
+            if (audioSource.isPlaying)
+            {
+                audioSource.clip = ufoMovement;
+                audioSource.Stop();
+            }
+        }
+        else if (Input.GetKey(KeyCode.Mouse0) && Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0)
         {
             if (audioSource.isPlaying)
             {
