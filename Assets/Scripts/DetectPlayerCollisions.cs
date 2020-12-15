@@ -7,14 +7,15 @@ using UnityEngine.SceneManagement;
 public class DetectPlayerCollisions : MonoBehaviour
 {
     [SerializeField] GameManager gameManager;
-    [SerializeField] int collisionDamage = 1;
+    [SerializeField] int collisionDamage = 2; // TO DO make this based on each meteor size
     private SoundManager soundManager;
     private ShieldAnimation shieldAnimation;
-    public Shields shields;
-    public int playerMaxHitPoints;
-    public float playerCurentHitpoints;
-    public float shieldRestoreValue = 0.010f;
-    public int rescuePoint = 2;
+    public ShieldManager shieldManager;
+    //public Shields shields;
+    //public int playerMaxHitPoints;
+    //public float playerCurentHitpoints;
+    //public float shieldRestoreValue = 0.010f;
+    //public int rescuePoint = 2;
 
 
     private void Start()
@@ -22,15 +23,19 @@ public class DetectPlayerCollisions : MonoBehaviour
         shieldAnimation = FindObjectOfType<ShieldAnimation>();
         GameObject soundManagerObject = GameObject.FindWithTag("SoundManager");
         soundManager = soundManagerObject.GetComponent<SoundManager>();
-        shields = FindObjectOfType<Shields>();
-        playerCurentHitpoints = playerMaxHitPoints;
-        shields.SetMaxShield(playerCurentHitpoints);
+
+        shieldManager = FindObjectOfType<ShieldManager>();
+        shieldManager.playerCurentHitpoints = shieldManager.playerMaxHitPoints;
+
+        //shields = FindObjectOfType<Shields>();
+        //playerCurentHitpoints = playerMaxHitPoints;
+        //shields.SetMaxShield(playerCurentHitpoints);
     }
 
     private void Update()
     {
         // Game over check
-        if (playerCurentHitpoints <= -1)
+        if (shieldManager.playerCurentHitpoints <= -1)
         {
             soundManager.MothershipDestroy();
             Destroy(gameObject);
@@ -44,9 +49,9 @@ public class DetectPlayerCollisions : MonoBehaviour
         if (other.gameObject.tag == "Hazard")
         {
             shieldAnimation.shieldHit = true;
-            playerCurentHitpoints -= collisionDamage;
+            shieldManager.DecreaseShield(collisionDamage);
             soundManager.MeteorDestroy();
-            shields.SetShield(playerCurentHitpoints);
+            //shields.SetShield(playerCurentHitpoints);
 
             if (shieldAnimation.shieldHit == true)
             {
@@ -57,9 +62,9 @@ public class DetectPlayerCollisions : MonoBehaviour
         }
 
         // Player hit points limit reset. To be used with power up
-        if (playerCurentHitpoints > playerMaxHitPoints)
+        if (shieldManager.playerCurentHitpoints > shieldManager.playerMaxHitPoints)
         {
-            playerCurentHitpoints = playerMaxHitPoints;
+            shieldManager.playerCurentHitpoints = shieldManager.playerMaxHitPoints;
         }
     }
 }

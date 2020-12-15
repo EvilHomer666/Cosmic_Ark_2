@@ -17,8 +17,8 @@ public class Shields : MonoBehaviour
             Instance = this;
             DontDestroyOnLoad(gameObject);
         }
-        //else
-        //    Destroy(gameObject);
+        else
+            Destroy(gameObject);
     }
 
     // Methods to show shield power through the slider component

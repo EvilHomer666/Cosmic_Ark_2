@@ -5,9 +5,12 @@ using UnityEngine;
 public class TracktorBeam : MonoBehaviour
 {
     private AudioSource audioSource;
+    private SoundManager soundManager;
     private void Start()
     {
         audioSource = GetComponent<AudioSource>();
+        GameObject soundManagerObject = GameObject.FindWithTag("SoundManager");
+        soundManager = soundManagerObject.GetComponent<SoundManager>();
         audioSource.Play();
     }
     // Applies an upwards force to all rigidbodies that enter the trigger.

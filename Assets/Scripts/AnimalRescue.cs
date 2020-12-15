@@ -4,15 +4,14 @@ using UnityEngine;
 
 public class AnimalRescue : MonoBehaviour
 {
-    private DetectPlayerCollisions playerRescueBonus;
+    [SerializeField] int creatureRescueBonus; // TO DO makes based on the type of creature - special creatures
     private ScoreManager scoreManager;
-    private Shields shields;
+    public ShieldManager shieldManager;
 
     private void Start()
     {
-        playerRescueBonus = FindObjectOfType<DetectPlayerCollisions>();
         scoreManager = FindObjectOfType<ScoreManager>();
-        shields = FindObjectOfType<Shields>();
+        shieldManager = FindObjectOfType<ShieldManager>();
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -20,8 +19,7 @@ public class AnimalRescue : MonoBehaviour
         if (other.gameObject.tag == "Creature")
         {
             Destroy(other.gameObject);
-            playerRescueBonus.playerCurentHitpoints += playerRescueBonus.rescuePoint;
-            shields.SetShield(playerRescueBonus.playerCurentHitpoints);
+            shieldManager.IncreaseShield(creatureRescueBonus);
             scoreManager.score += scoreManager.rescueBonus;
 
         }
