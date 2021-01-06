@@ -2,32 +2,25 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+
 
 public class ScoreManager : MonoBehaviour
 {
-    [SerializeField] Text scoreText;
-
-    // Singleton used to carry score across scenes
-    public static ScoreManager Instance { get; private set; }
+    private int score;
+    private Scene activeScene;
+    private string sceneName;
     public int rescueBonus = 400;
-    public int score;
-
-    private void Awake()
-    {
-        if (Instance == null)
-        {
-            Instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-        else
-            Destroy(gameObject);
-    }
+    public Text scoreText;
 
     // Start is called before the first frame update
     void Start()
     {
         // Set score defaults and references
-        score = 0;
+        scoreText = GameObject.Find("ScoreText").GetComponent<Text>();
+        activeScene = SceneManager.GetActiveScene();
+        sceneName = activeScene.name;
+        InitialScoreCheck();
         UpdateScoreText();
     }
 
@@ -42,5 +35,25 @@ public class ScoreManager : MonoBehaviour
     public void UpdateScoreText()
     {
         scoreText.text = $"SCORE: {score}";
+    }
+
+    // Save hit points to global player variables
+    public void SavePlayerData()
+    {
+        GlobalPlayerVariables.Instance.playerCurrentScore = score;
+    }
+
+    // Check if playing first level to set initial score
+    private void InitialScoreCheck()
+    {
+        if (sceneName == "Level_01")
+        {
+            score = 0;
+        }
+        else
+        {
+            score = GlobalPlayerVariables.Instance.playerCurrentScore;
+            UpdateScoreText();
+        }
     }
 }

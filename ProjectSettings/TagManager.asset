@@ -13,6 +13,9 @@ TagManager:
   - ShieldSlider
   - Creature
   - SoundManager
+  - UFO
+  - Shuttle
+  - MotherShip
   layers:
   - Default
   - TransparentFX

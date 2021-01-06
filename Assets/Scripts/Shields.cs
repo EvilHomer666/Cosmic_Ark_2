@@ -12,13 +12,15 @@ public class Shields : MonoBehaviour
 
     private void Awake()
     {
-        if (Instance == null)
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+        }
+        else
         {
             Instance = this;
             DontDestroyOnLoad(gameObject);
         }
-        else
-            Destroy(gameObject);
     }
 
     // Methods to show shield power through the slider component

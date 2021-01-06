@@ -7,6 +7,7 @@ public class UFOController : MonoBehaviour
     [SerializeField] AudioClip ufoMovement;
     [SerializeField] float playerSpeed;
     private TracktorBeamActivation tracktorBeam;
+    private LevelTransition sceneManager;
     private AudioSource audioSource;
     private float xRange = 85f;
     private float yRangeUp = 5f;
@@ -15,10 +16,10 @@ public class UFOController : MonoBehaviour
     private float verticalInput;
     public bool isEnabled; // Variable to check for UFO movement condition
 
-
     private void Start()
     {
         tracktorBeam = FindObjectOfType<TracktorBeamActivation>();
+        sceneManager = FindObjectOfType<LevelTransition>();
         audioSource = GetComponent<AudioSource>();
         isEnabled = true;
     }
@@ -82,6 +83,15 @@ public class UFOController : MonoBehaviour
                 audioSource.clip = ufoMovement;
                 audioSource.Stop();
             }
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        // Detect when UFO detects mothership
+        if (other.gameObject.tag == "MotherShip")
+        {
+            sceneManager.RecycleLevel();
         }
     }
 }

@@ -8,7 +8,6 @@ public class Timers : MonoBehaviour
 {
     [SerializeField] Text timerText;
     [SerializeField] float roundTime; // Start level time at 60 sec. This number will change depending on game progression.
-
     private LevelTransition sceneManager;
     private float timerLimit = 0.005f;
     

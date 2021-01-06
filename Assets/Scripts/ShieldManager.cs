@@ -2,52 +2,86 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class ShieldManager : MonoBehaviour
 {
-    [SerializeField] Text shieldText;
-
-    // Singleton used to carry shield values across scenes
-    public static ShieldManager Instance { get; private set; }
+    private SoundManager soundManager;
+    private GameManager gameManager;
+    private Scene activeScene;
+    private string sceneName;
+    public float playerHitpoints;
     public int playerMaxHitPoints;
-    public float playerCurentHitpoints;
-    public int rescuePoint = 2;
-
-    private void Awake()
-    {
-        if (Instance == null)
-        {
-            Instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-        else
-            Destroy(gameObject);
-    }
+    public int gameOverInt = -1;
+    public Text shieldText;
 
     // Start is called before the first frame update
     void Start()
     {
         // Set shield defaults and references
-        playerCurentHitpoints = playerMaxHitPoints;
-        UpdateShieldText();
+        GameObject soundManagerObject = GameObject.FindWithTag("SoundManager");
+        soundManager = soundManagerObject.GetComponent<SoundManager>();
+        gameManager = FindObjectOfType<GameManager>();
+        shieldText = GameObject.Find("ShieldText").GetComponent<Text>();
+        activeScene = SceneManager.GetActiveScene();
+        sceneName = activeScene.name;
+        LevelModeCheck();
     }
 
-    // Add shield value and update text
+    private void Update()
+    {
+        // Game over check
+        if (playerHitpoints <= gameOverInt)
+        {
+            soundManager.MothershipDestroy();
+            Destroy(gameObject);
+            gameManager.GameOver();
+        }
+    }
+
+    // ADD shield value and update text
     public void IncreaseShield(int increaseShield)
     {
-        playerCurentHitpoints += increaseShield;
+        playerHitpoints += increaseShield;
         UpdateShieldText();
+
+        // Player hit points limit reset
+        if (playerHitpoints > playerMaxHitPoints)
+        {
+            playerHitpoints = playerMaxHitPoints;
+        }
     }
-    // Substract shield value and update text
+
+    // SUBTRACT shield value and update text
     public void DecreaseShield(int decreaseShield)
     {
-        playerCurentHitpoints -= decreaseShield;
+        playerHitpoints -= decreaseShield;
         UpdateShieldText();
     }
 
     // Update shield text method
     public void UpdateShieldText()
     {
-        shieldText.text = $"Shields: {playerCurentHitpoints}%";
+        shieldText.text = $"Shields: {playerHitpoints}%";
+    }
+
+    // Save hit points to global player variables
+    public void SavePlayerData()
+    {
+        GlobalPlayerVariables.Instance.playerCurrentHitpoints = playerHitpoints;
+    }
+
+    // Check if playing first level to set initial hitpoints
+    private void LevelModeCheck()
+    {
+        if (sceneName == "Level_01")
+        {
+            playerHitpoints = playerMaxHitPoints;
+        }
+        else
+        {
+            playerHitpoints = GlobalPlayerVariables.Instance.playerCurrentHitpoints;
+            UpdateShieldText();
+        }
     }
 }

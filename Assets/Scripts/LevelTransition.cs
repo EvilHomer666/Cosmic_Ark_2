@@ -19,4 +19,10 @@ public class LevelTransition : MonoBehaviour
         LoadNextLevel(SceneManager.GetActiveScene().buildIndex + 1);
         SceneManager.LoadScene(levelToLoad);
     }
+
+    // Method to load next scene during demo
+    public void RecycleLevel()
+    {
+        SceneManager.LoadScene("Level_01");
+    }
 }

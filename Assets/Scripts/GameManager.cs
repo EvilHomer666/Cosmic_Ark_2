@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour
 {
     [SerializeField] Text gameOverText;
     [SerializeField] Text tryAgainText;
-    private float pauseDelay = 1;
+    private float pauseDelay = 2;
     public bool gameOver;
 
     // Start is called before the first frame update

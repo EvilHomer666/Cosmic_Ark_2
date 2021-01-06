@@ -23,7 +23,7 @@ public class SoundManager : MonoBehaviour
     // SFX methods
     public void Fire()
     {
-        audioSource.PlayOneShot(FireProjectile, 0.5f);
+        audioSource.PlayOneShot(FireProjectile, 0.25f);
         return;
     }
     public void UFO_Rescue()
