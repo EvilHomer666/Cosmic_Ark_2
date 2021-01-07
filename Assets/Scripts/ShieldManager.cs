@@ -12,7 +12,6 @@ public class ShieldManager : MonoBehaviour
     private string sceneName;
     public float playerHitpoints;
     public int playerMaxHitPoints;
-    public int gameOverInt = -1;
     public Text shieldText;
 
     // Start is called before the first frame update
@@ -31,10 +30,9 @@ public class ShieldManager : MonoBehaviour
     private void Update()
     {
         // Game over check
-        if (playerHitpoints <= gameOverInt)
+        if (playerHitpoints <= 0)
         {
-            soundManager.MothershipDestroy();
-            Destroy(gameObject);
+            Destroy(GameObject.FindWithTag("Player"));
             gameManager.GameOver();
         }
     }

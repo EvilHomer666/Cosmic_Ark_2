@@ -33,6 +33,12 @@ public class DetectPlayerCollisions : MonoBehaviour
                 shieldAnimation.PlayShieldAnimation();
             }
 
+            // Game over check
+            if (shieldManager.playerHitpoints <= 0)
+            {
+                soundManager.MothershipDestroy();
+            }
+
             Destroy(other.gameObject);
         }
     }
