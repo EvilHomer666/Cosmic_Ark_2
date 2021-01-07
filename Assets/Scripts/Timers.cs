@@ -8,6 +8,8 @@ public class Timers : MonoBehaviour
 {
     [SerializeField] Text timerText;
     [SerializeField] float roundTime; // Start level time at 60 sec. This number will change depending on game progression.
+    private ShieldManager shieldData;
+    private ScoreManager scoreData;
     private LevelTransition sceneManager;
     private float timerLimit = 0.005f;
     
@@ -16,7 +18,8 @@ public class Timers : MonoBehaviour
     void Start()
     {
         sceneManager = FindObjectOfType<LevelTransition>();
-
+        shieldData = FindObjectOfType<ShieldManager>();
+        scoreData = FindObjectOfType<ScoreManager>();
         // TO DO add condition to check score and adjust round time based on game progress.
     }
 
@@ -35,6 +38,8 @@ public class Timers : MonoBehaviour
 
         if (roundTime < timerLimit)
         {
+            shieldData.SavePlayerData();
+            scoreData.SavePlayerData();
             sceneManager.MoveToNextLevel();
         }
     }
